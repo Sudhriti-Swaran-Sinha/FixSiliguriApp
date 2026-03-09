@@ -1,4 +1,26 @@
 {
-  "name": "FixSiliguriApp",
-  "displayName": "FixSiliguriApp"
+  "expo": {
+    "name": "Fix Siliguri",
+    "slug": "fixsiliguriapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B1B3A"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B1B3A"
+      },
+      "package": "com.fixsiliguri.app"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6801ddf3-db8f-41f1-8412-2ce467e9ac14"
+      }
+    }
+  }
 }
