@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,8 +28,8 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
           packager: npm
 
-      - name: Build APK
-        run: eas build --platform android --profile preview --non-interactive
+      - name: Trigger EAS Build
+        run: eas build --platform android --profile preview --non-interactive --no-wait
 
-      - name: Get APK download URL
-        run: eas build:list --platform android --limit 1
+      - name: Done
+        run: echo "APK building on EAS! Check email when done."
